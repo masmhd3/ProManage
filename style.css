@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+    color: white;
+    font-family: system-ui, sans-serif;
+}
+
+/* head */
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.crud .head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+/* input */
+input{
+    width: 100%;
+    background-color: #111;
+    border: none;
+    outline: none;
+    height: 30px;
+    padding: 4px;
+    margin: 4px 0;
+    color: white;
+    border-radius: 4px;
+}
+input:focus{
+    background-color: #000;
+    scale: 1.02;
+}
+
+.price input{
+    width: 20%;
+}
+.price small{
+    background-color: #a00d02;
+    padding: 5px 5px ;
+    border-radius: 2px;
+}
+.price small::before{
+    content: 'totale: ';
+}
+
+button{
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: #390053;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover{
+    background-color: #51025f;
+    letter-spacing: 1px;
+}
+
+/* output */
+.btn-serch{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-serch button{
+    width: 45%;
+}
+
+/* table */
+table{
+   width: 100%;
+   text-align: center;
+   margin: 10px 0;
+}
+table th,td{
+    padding: 5px;
+}
+
+
+
+/* delete-all */
+.delete-all{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Table Container */
+.output {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensures table doesn’t shrink too much */
+}
+
+/* Table Headers & Cells */
+table th, table td {
+    padding: 10px;
+    
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .crud {
+        width: 95%; /* Adjust width for smaller screens */
+    }
+
+    .price input {
+        width: 100%; /* Stack inputs on smaller screens */
+    }
+
+    table {
+        min-width: 100%; /* Avoids too much shrinking */
+        font-size: 14px; /* Reduces font size for better visibility */
+    }
+
+    /* Make Table Scrollable */
+    .output {
+        overflow-x: auto;
+    }
+
+    /* Improve Button Layout */
+    .btn-serch {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-serch button {
+        width: 100%;
+        
+    }
+    table tr td button{
+        height: 35px;
+        padding: 0 15px;
+    }
+}
